@@ -1,10 +1,7 @@
 function [daily_port,datahat,datahat_center,phi_tplus1_hat,weight1,weight2,weight3]=SPO_kpmodLR_fun(close_price,data,tplus1,daily_port, datahat,datahat_center,phi_t_hat,win_size,opts,daily_port_total,weight2,weight3)
 %{
-This function is the main code for the Adaptive Input and Composite Trend Representation (AICTR)[2]
-system. It exploits a set of RBFs with multiple trend representations, 
-which improves the effectiveness and robustness in price prediction. 
-Moreover, the input of the RBFs automatically switches to the best trend representation 
-according to the recent investing performance of different price predictions.
+This function is the main code for the (CP-AICTR)
+system. 
 
 For any usage of this function, the following papers should be cited as
 reference:
@@ -59,7 +56,7 @@ theta = 0.8; 			  % -mixing parameter
 q1 = 0.1;% local weighted parameter
 lambda = 0.7;%L1 regurlation strength
 bigphi = zeros(3,1);
-eta_ktpt = 60000;
+eta_ktpt = 40000;
 
 [T,nstk]=size(data);
 x_t = data(tplus1-1,:);
