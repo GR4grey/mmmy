@@ -1,0 +1,9 @@
+[cum_ret,market,market_vr, cumprod_ret, daily_ret, daily_portfolio] = ubah_run_self( data);
+[cum_ret, cumprod_ret, daily_ret, daily_portfolio] = best_run_self( data,market,market_vr);
+[cum_ret, cumprod_ret, daily_ret, daily_portfolio] = corn_run_self(data,market,market_vr);
+[cum_ret, cumprod_ret, daily_ret, daily_portfolio]   = olmar2_run_self( data ,market,market_vr);
+[cum_wealth, daily_incre_fact, daily_port_total] = RPRT_run(data,market,market_vr);
+[total_ret, day_ret] = weighted_run(data,0,market,market_vr);
+[ cum_wealth, daily_incre_fact, daily_port_total] = PPT_run(data, win_size, 0,market,market_vr);
+[ cum_wealth, daily_incre_fact, daily_port_total] = AICTR_run( data,win_size,0,market,market_vr);
+[ cum_wealth, daily_incre_fact, daily_port_total] = SPO_kp_run( data,opts,market,market_vr);
