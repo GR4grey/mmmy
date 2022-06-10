@@ -1,10 +1,7 @@
 function [ cum_wealth, daily_incre_fact, daily_port_total] = SPO_kp_run( data,opts,market,market_vr)
 %{
-This function is part of the codes for the Adaptive Input and Composite Trend Representation (AICTR)[2]
-system. It exploits a set of RBFs with multiple trend representations, 
-which improves the effectiveness and robustness in price prediction. 
-Moreover, the input of the RBFs automatically switches to the best trend representation 
-according to the recent investing performance of different price predictions.
+This function is part of the codes for the CP-AICTR
+system. 
 
 For any usage of this function, the following papers should be cited as
 reference:
